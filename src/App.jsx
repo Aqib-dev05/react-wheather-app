@@ -6,6 +6,15 @@ function App() {
 
   return (
     <>
+    <div className="container">
+        <div className="inner">
+          <form >
+            <input type="text" />
+            <button type='submit'>get</button>
+          </form>
+          <div className="show"></div>
+        </div>
+    </div>
 
     </>
   )
