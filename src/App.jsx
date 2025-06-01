@@ -1,4 +1,4 @@
-import './App.css';
+
 import Show from "./Show";
 import Form from "./Form"
 function App() {
