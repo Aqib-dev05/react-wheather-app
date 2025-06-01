@@ -30,7 +30,7 @@ function App() {
         return res.json();
       })
       .then((data) => {
-
+          
         setWeather({
           humidity: data.main.humidity,
           temp: data.main.temp,
@@ -41,6 +41,7 @@ function App() {
         setCity("");
       })
       .catch((error) => {
+        setShow(false);
         console.error("Error fetching weather data:", error);
       });
   }
