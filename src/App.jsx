@@ -6,7 +6,7 @@ function App() {
   const URL = "https://api.openweathermap.org/data/2.5/weather?q={city}&appid={KEY}&units=metric";
 
   const [city, setCity] = useState("");
-  const[show,setShow]=useState(false);
+  const [show, setShow] = useState(false);
 
   const [weather, setWeather] = useState({
     humidity: "",
@@ -31,7 +31,7 @@ function App() {
         return res.json();
       })
       .then((data) => {
-          
+
         setWeather({
           humidity: data.main.humidity,
           temp: data.main.temp,
@@ -53,8 +53,8 @@ function App() {
       <div className="h-[100vh]  w-[100vw] flex justify-center items-center bg-gradient-to-r from-blue-500 to-purple-500">
         <div className="bg-white overflow-hidden pb-10 max-md:w-[100%] w-[500px] rounded-4xl shadow-lg flex flex-col  items-center gap-5">
           <Form inpVal={city} print={handleClick} handleInp={handleInput} />
-          
-         {show && (  <Show data={weather} />)}
+
+          {show && (<Show data={weather} />)}
         </div>
       </div>
 
