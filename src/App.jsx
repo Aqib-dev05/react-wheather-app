@@ -21,7 +21,8 @@ function App() {
     setCity(e.target.value);
   }
 
-  function handleClick() {
+  function handleClick(e) {
+    e.preventDefault();
     fetch(URL.replace("{city}", city).replace("{KEY}", KEY))
       .then((res) => {
         if (!res.ok) {
@@ -50,7 +51,7 @@ function App() {
   return (
     <>
       <div className="h-[100vh]  w-[100vw] flex justify-center items-center bg-gradient-to-r from-blue-500 to-purple-500">
-        <div className="bg-white pb-10 max-md:w-[100%] w-[500px] rounded-4xl shadow-lg flex flex-col  items-center gap-5">
+        <div className="bg-white overflow-hidden pb-10 max-md:w-[100%] w-[500px] rounded-4xl shadow-lg flex flex-col  items-center gap-5">
           <Form inpVal={city} print={handleClick} handleInp={handleInput} />
           
          {show && (  <Show data={weather} />)}
