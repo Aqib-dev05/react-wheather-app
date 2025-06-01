@@ -1,9 +1,9 @@
-import Cloud from "./assets/cloudy.jpeg"
+
 import { Wind, Waves } from "lucide-react";
 export default function Show() {
     return (
         <div className="w-full  flex flex-col  items-center gap-5">
-            <img src={Cloud} className="size-[200px] object-cover " alt="pic" />
+            <img  className="size-[200px] object-cover " alt="pic" />
             <div className="flex flex-col justify-center items-center" >
                 <h1 className="text-[66px] font-bold " >34<span className="pl-1 text-[26px] font-medium ">&deg;C</span> </h1>
                 <p className="text-[25px] font-semibold" >Clear Sky</p>
