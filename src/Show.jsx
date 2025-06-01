@@ -14,22 +14,22 @@ import Dust from "./assets/dust.png";
 
 
 export default function Show({ data }) {
-    let cleanDesc=data.description.replace(/\s+/g,'');
+    let cleanDesc = data.description.replace(/\s+/g, '');
     const images = {
-    clearsky:Sunny,
-    fewclouds: FewClounds,
-    scatteredclouds:Scatter,
-    brokenclouds: Broken,
-    overcastclouds: Over,
-    lightrain: Rain,
-    moderaterain: Rain,
-    heavyintensityrain:Rain, 
-    snow: Snow,
-    haze: Haze,
-    thunderstorm:Thunder, 
-    smoke: Smoke,
-    dust: Dust
-}
+        clearsky: Sunny,
+        fewclouds: FewClounds,
+        scatteredclouds: Scatter,
+        brokenclouds: Broken,
+        overcastclouds: Over,
+        lightrain: Rain,
+        moderaterain: Rain,
+        heavyintensityrain: Rain,
+        snow: Snow,
+        haze: Haze,
+        thunderstorm: Thunder,
+        smoke: Smoke,
+        dust: Dust
+    }
 
     return (
         <div className="w-full  flex flex-col  items-center gap-5">
